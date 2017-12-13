@@ -44,15 +44,8 @@ class Server {
     requestHandler(request, response) {
 		const redirect = this.findRedirect(request);
 
-		// response.status = redirect.code;
-		// response.setHeader('Location', redirect.matchedLocation);
-		// response.end();
-
-
-		// return;
-
         if (redirect) {
-			response.status = redirect.code;
+			response.statusCode = redirect.code;
 			response.setHeader('Location', redirect.matchedLocation);
             response.end();
 
@@ -66,7 +59,7 @@ class Server {
             response.statusCode = 404;
             response.end('Not Found');
 
-            // io.out.log(404, `${request.headers.host}${request.url}`);
+            io.out.log(404, `${request.headers.host}${request.url}`);
         }
     }
 }

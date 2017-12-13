@@ -45,6 +45,16 @@ reroute -c ./routes.js
 With docker, simply run:
 
 ```
-docker run -d -v $(pwd)/routes.js:/app/routes.js -p 80:8000 meistr/reroute
+docker run -d -v $(pwd)/routes.js:/app/routes.js -p 8000:80 meistr/reroute
 ```
 
+### Test the running server
+Run a curl against your local service and see if it redirects you properly.
+```
+❯ curl -i -H "Host: my.domain" localhost:8000/some-path
+HTTP/1.1 302 Found
+Location: http://new.domain/
+Date: Wed, 13 Dec 2017 15:36:38 GMT
+Connection: keep-alive
+Content-Length: 0
+```
