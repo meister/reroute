@@ -1,0 +1,6 @@
+{
+  "extends": "pipedrive/es8",
+  "env": {
+    "es6": true
+  }
+}
