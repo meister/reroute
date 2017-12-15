@@ -6,7 +6,10 @@ EXPOSE 80
 WORKDIR /app/
 
 COPY package.json package-lock.json /app/
-RUN npm install --only=production
+RUN apk update && \
+	apk add --no-cache add python build-base && \
+	npm install --only=production \
+	apk del python build-base
 
 COPY lib /app/lib
 COPY server /app/server

@@ -1,7 +1,5 @@
-const http = require('http');
+const http = require('mitol');
 const io = require('../lib/io');
-
-http.globalAgent.maxSockets = Infinity;
 
 const defaultOptions = {
     port: process.env.PORT || 8000,
@@ -49,7 +47,7 @@ class Server {
         if (redirect) {
 			response.statusCode = redirect.code;
 			response.setHeader('Location', redirect.matchedLocation);
-			response.end(redirect.matchedLocation);
+            response.end();
 
 			io.out.log(
 				redirect.code,
