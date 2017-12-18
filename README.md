@@ -22,13 +22,14 @@ example:
 ```javascript
 // routes.js
 module.exports = [{
-  domain: /^my.domain$/,
+  host: /^my\.domain$/,
   path: /.*/,
   location: 'http://new.domain/'
 },
 {
-  domain: /^foo\.bar$/,
+  host: /^foo\.bar$/,
   path: /.*/,
+  code: 301,
   location: '//another.domain/${path}'
 }];
 ```
@@ -38,7 +39,7 @@ Read Configuration section in the documentation.
 ### Run server
 Then run in your terminal:
 ```
-reroute -c ./routes.js
+reroute
 ```
 
 ### Running in Docker
@@ -46,6 +47,13 @@ With docker, simply run:
 
 ```
 docker run -d -v $(pwd)/routes.js:/app/routes.js -p 8000:80 meistr/reroute
+```
+
+### Specifying custom routes path
+Add `ENV` variable:
+
+```
+REROUTE_CONFIG=/your-path-to/routes.js reroute
 ```
 
 ### Test the running server
