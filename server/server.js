@@ -46,7 +46,7 @@ class Server {
     requestHandler(request, response) {
 		const redirect = this.findRedirect(request);
 
-        if (redirect) {
+		if (redirect) {
 			response.statusCode = redirect.code;
 			response.setHeader('Location', redirect.matchedLocation);
 			response.end(redirect.matchedLocation);
