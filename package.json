@@ -5,7 +5,7 @@
   "main": "./server/index.js",
   "scripts": {
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint ."
   },
   "author": "Martin Kapp <martin@coderats.net>",
@@ -13,6 +13,8 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-pipedrive": "^1.0.8",
+    "eslint-plugin-jest": "^21.5.0",
+    "jest": "^22.0.1",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0"
   },
@@ -21,5 +23,17 @@
     "cli-color-tty": "^2.0.0",
     "lodash.at": "^4.6.0",
     "mitol": "0.0.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/examples/**",
+      "!**/coverage/**",
+      "!**/node_modules/**"
+    ]
   }
 }

@@ -1,8 +1,12 @@
 const io = require('../lib/io');
 const RouteList = require('../lib/route-list');
-const Server = require('./server');
+const Server = require('../lib/server');
 const { resolve } = require('path');
 const configPath = resolve(process.env.REROUTE_CONFIG || 'routes.js');
+const serverConfig = {
+	port: process.env.PORT || 8000,
+	httpFactory: require(process.env.REROUTE_SERVER || 'http')
+};
 
 let routes;
 
@@ -14,7 +18,7 @@ try {
     process.exit(1);
 }
 
-const server = new Server(routes.get());
+const server = new Server(routes.get(), serverConfig);
 
 server.start()
     .then(port => {

@@ -1,6 +1,13 @@
 {
-  "extends": "pipedrive/es8",
+  "extends": [
+    "pipedrive/es8",
+    "plugin:jest/recommended"
+  ],
   "env": {
-    "es6": true
-  }
+    "es6": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "jest"
+  ]
 }
