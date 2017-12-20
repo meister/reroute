@@ -1,5 +1,7 @@
 # Reroute!
 
+[![Build Status](https://travis-ci.org/meister/reroute.svg?branch=master)](https://travis-ci.org/meister/reroute)
+
 Reroute! is a single purpose service intended to redirect incoming requests
 based on their domain name and path.
 
