@@ -1,6 +1,6 @@
 # Reroute!
 
-[![Build Status](https://travis-ci.org/meister/reroute.svg?branch=master)](https://travis-ci.org/meister/reroute)
+[![Build Status](https://travis-ci.org/meister/reroute.svg?branch=master)](https://travis-ci.org/meister/reroute) [![Greenkeeper badge](https://badges.greenkeeper.io/meister/reroute.svg)](https://greenkeeper.io/)
 
 Reroute! is a single purpose service intended to redirect incoming requests
 based on their domain name and path.
