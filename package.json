@@ -12,7 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.1.0",
-    "eslint-config-pipedrive": "^3.0.0",
+    "eslint-config-pipedrive": "^4.0.0",
     "eslint-plugin-jest": "^21.5.0",
     "jest": "^23.4.0",
     "mocha": "^5.2.0",
