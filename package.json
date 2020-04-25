@@ -1,6 +1,6 @@
 {
   "name": "reroute-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "HTTP Redirect service",
   "main": "./server/index.js",
   "scripts": {
