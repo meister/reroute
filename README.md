@@ -14,7 +14,7 @@ will act as a regression handler.
 
 Installation and starting the service:
 ```
-npm install -g reroute
+npm install -g reroute-server
 ```
 
 ### Configure routes
@@ -34,6 +34,15 @@ module.exports = [{
   code: 301,
   location: '//another.domain/${path}'
 }];
+```
+
+You can also have a fallback _any domain_ router:
+```javascript
+{
+  host: /.*/,
+  path: /.*/,
+  location: 'http://my.domain.tld'
+}
 ```
 
 
