@@ -11,21 +11,21 @@ const serverConfig = {
 let routes;
 
 try {
-    routes = new RouteList(configPath);
+	routes = new RouteList(configPath);
 } catch (err) {
-    io.err.print('Could not find route configuration.');
-    io.err.debug(err);
-    process.exit(1);
+	io.err.print('Could not find route configuration.');
+	io.err.debug(err);
+	process.exit(1);
 }
 
 const server = new Server(routes.get(), serverConfig);
 
 server.start()
-    .then(port => {
-        io.out.print('Started server at port', io.color.green(port));
-    })
-    .catch((err, port) => {
-        io.err.print('Could not start server at port', port);
-        io.err.debug(err);
-        process.exit(2);
-    });
+	.then(port => {
+		io.out.print('Started server at port', io.color.green(port));
+	})
+	.catch((err, port) => {
+		io.err.print('Could not start server at port', port);
+		io.err.debug(err);
+		process.exit(2);
+	});

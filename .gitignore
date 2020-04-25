@@ -1,3 +1,4 @@
+.sonarlint
 node_modules
 coverage
 ./routes.js
