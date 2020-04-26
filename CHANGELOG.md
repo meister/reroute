@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Raised Node version from 8 to 10
+
+### Fixed
+- Improved path detection (works now again with empty path)
 
 ## [1.1.0] - 2020-04-25
 ### Changed
