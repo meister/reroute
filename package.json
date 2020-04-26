@@ -2,6 +2,10 @@
   "name": "reroute-server",
   "version": "1.1.0",
   "description": "HTTP Redirect service",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meister/reroute.git"
+  },
   "main": "./server/index.js",
   "scripts": {
     "start": "node server",
@@ -15,7 +19,7 @@
   "devDependencies": {
     "changelog-updater": "^1.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-pipedrive": "^5.2.0",
+    "eslint-config-pipedrive": "5.1.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^25.4.0",
     "nodemon": "^2.0.3"
@@ -30,11 +34,10 @@
       "js",
       "jsx"
     ],
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "**/*.{js}",
-      "!**/examples/**",
-      "!**/coverage/**",
-      "!**/node_modules/**"
+      "<rootDir>/lib/**/*.{js}",
+      "<rootDir>/server/**/*.{js}"
     ]
   }
 }

@@ -38,15 +38,14 @@ module.exports = [{
 
 You can also have a fallback _any domain_ router:
 ```javascript
-{
+module.exports = [{
   host: /.*/,
   path: /.*/,
   location: 'http://my.domain.tld'
-}
+}];
 ```
 
 
-Read Configuration section in the documentation.
 ### Run server
 Then run in your terminal:
 ```

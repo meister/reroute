@@ -1,12 +1,12 @@
 // Require Class
-const Server = require('./server');
+const Server = require('../lib/server');
 
 // Set up mocks
 const { EventEmitter } = require('events');
 
-jest.mock('./io');
+jest.mock('../lib/io');
 
-const ioMock = require('./io');
+const ioMock = require('../lib/io');
 const httpModule = jest.genMockFromModule('http');
 const listenError = new Error('Invalid port');
 const listenMock = jest.fn((port, cb) => {
@@ -113,12 +113,13 @@ describe('stop()', () => {
 		fakeServer.removeAllListeners();
 	});
 
+	// eslint-disable-next-line jest/expect-expect
 	it('resolves when stopping server', async () => {
 		process.nextTick(() => {
 			fakeServer.emit('close');
 		});
 
-		return server.stop();
+		return await server.stop();
 	});
 
 	it('rejects when stopping server with error', () => {
