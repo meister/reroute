@@ -119,7 +119,7 @@ describe('stop()', () => {
 			fakeServer.emit('close');
 		});
 
-		return await server.stop();
+		return server.stop();
 	});
 
 	it('rejects when stopping server with error', () => {
