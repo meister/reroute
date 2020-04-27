@@ -10,7 +10,7 @@ on:
     branches: [test-branch]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
       - run: npm run lint
 
 #   publish-npm:
-#     needs: build
+#     needs: test
 #     runs-on: ubuntu-latest
 #     steps:
 #       - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
 #           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: 10
           registry-url: https://npm.pkg.github.com/
-      - run: pwd && cat .npmrc
+      - run: pwd && env && cat /home/runner/.npmrc
       - run: npm ci
       - run: npm publish
         env:
