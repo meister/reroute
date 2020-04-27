@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2-rc.3] - 2020-04-27
+
 ## [1.1.2-rc.2] - 2020-04-27
 
 ## [1.1.2-rc.1] - 2020-04-27
@@ -35,7 +37,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/meister/reroute/compare/v1.1.2-rc.2...HEAD
+[Unreleased]: https://github.com/meister/reroute/compare/v1.1.2-rc.3...HEAD
+[1.1.2-rc.3]: https://github.com/meister/reroute/compare/v1.1.2-rc.2...v1.1.2-rc.3
 [1.1.2-rc.2]: https://github.com/meister/reroute/compare/v1.1.2-rc.1...v1.1.2-rc.2
 [1.1.2-rc.1]: https://github.com/meister/reroute/compare/v1.1.2-rc.0...v1.1.2-rc.1
 [1.1.2-rc.0]: https://github.com/meister/reroute/compare/v1.1.1...v1.1.2-rc.0
