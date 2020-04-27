@@ -4,3 +4,4 @@ coverage
 ./routes.js
 *.log
 .vscode
+/routes.js
