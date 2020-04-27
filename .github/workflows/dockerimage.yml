@@ -7,14 +7,14 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - run: env
-    - run: "sed 's/.*\"version\": \"\\(.*\\)\".*/\\1/;t;d' ./package.json\""
-#     - uses: actions/checkout@v2
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag meistr/reroute:$(date +%s)
-#     - name: Tag latest
-#       run: docker tag meistr/reroute:$() meistr/reroute:latest
+      - uses: actions/checkout@v2
+      - uses: docker/build-push-action@v1
+        with:
+          username: meistr
+          password: ${{ secrets.docker_hub_token }}
+          repository: meistr/reroute
+          tag_with_ref: true
+          tags: latest

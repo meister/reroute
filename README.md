@@ -14,7 +14,7 @@ will act as a regression handler.
 
 Installation and starting the service:
 ```
-npm install -g reroute-server
+npm install -g @meister/reroute
 ```
 
 ### Configure routes

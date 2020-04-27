@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- The package in NPM is now named `@meister/reroute`
+
+## [1.1.2-1] - 2020-04-27
+
+## [1.1.2-0] - 2020-04-27
 
 ## [1.1.1] - 2020-04-27
 ### Changed
@@ -23,6 +29,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.1...HEAD
-[1.1.1]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.0...v1.1.1
-[1.1.0]: https://github.com/nikolajevp/changelog-updater/compare/v1.0.0...v1.1.0
+[Unreleased]: https://github.com/meister/reroute/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/meister/reroute/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/meister/reroute/compare/v1.0.0...v1.1.0
