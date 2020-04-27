@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - run: env
+    - run: "sed 's/.*\"version\": \"\\(.*\\)\".*/\\1/;t;d' ./package.json\""
 #     - uses: actions/checkout@v2
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag meistr/reroute:$(date +%s)
