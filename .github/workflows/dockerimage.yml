@@ -4,8 +4,11 @@ name: Docker Image CI
 #   release:
 #     types: [created]
 on:
-  registry_package:
-    types: [published]
+  # registry_package:
+  #   types: [published]
+  push:
+    branches:
+      - test-branch
 
 jobs:
 
@@ -14,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: env
-#     - uses: actions/checkout@v2
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag meistr/reroute:$(date +%s)
-#     - name: Tag latest
-#       run: docker tag meistr/reroute:$() meistr/reroute:latest
+      - uses: docker/build-push-action@v1
+        with:
+          username: meistr
+          password: ${{ secrets.docker_hub_token }}
+          repository: meistr/reroute
+          tag_with_ref: true
