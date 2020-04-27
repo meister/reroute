@@ -2,6 +2,7 @@
   "name": "@meister/reroute",
   "version": "1.1.2-rc.0",
   "description": "HTTP Redirect service",
+  "keywords": ["http", "nodejs", "server", "redirect"],
   "repository": {
     "type": "git",
     "url": "https://github.com/meister/reroute.git"
