@@ -30,11 +30,21 @@
     "lodash.at": "^4.6.0"
   },
   "jest": {
+    "rootDir": ".",
+    "testEnvironment": "node",
+    "verbose": true,
     "moduleFileExtensions": [
       "js",
-      "jsx"
+      "json",
+      "ts"
     ],
-    "collectCoverage": true,
+    "testRegex": "/tests/.*\\.test\\.js$",
+    "coverageReporters": [
+      "lcov",
+      "html",
+      "text"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
     "collectCoverageFrom": [
       "<rootDir>/lib/**/*.{js}",
       "<rootDir>/server/**/*.{js}"
