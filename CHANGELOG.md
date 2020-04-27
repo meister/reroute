@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2-0] - 2020-04-27
+
 ## [1.1.1] - 2020-04-27
 ### Changed
 - Raised Node version from 8 to 10
@@ -23,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.2-0...HEAD
+[1.1.2-0]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.1...v1.1.2-0
 [1.1.1]: https://github.com/nikolajevp/changelog-updater/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/nikolajevp/changelog-updater/compare/v1.0.0...v1.1.0
