@@ -1,6 +1,6 @@
 {
   "name": "@meister/reroute",
-  "version": "1.1.2-1",
+  "version": "1.1.2-rc.0",
   "description": "HTTP Redirect service",
   "repository": {
     "type": "git",
