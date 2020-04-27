@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2-rc.1] - 2020-04-27
+
 ## [1.1.2-rc.0] - 2020-04-27
 ### Changed
 - The package in NPM is now named `@meister/reroute`
@@ -31,7 +33,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/meister/reroute/compare/v1.1.2-rc.0...HEAD
+[Unreleased]: https://github.com/meister/reroute/compare/v1.1.2-rc.1...HEAD
+[1.1.2-rc.1]: https://github.com/meister/reroute/compare/v1.1.2-rc.0...v1.1.2-rc.1
 [1.1.2-rc.0]: https://github.com/meister/reroute/compare/v1.1.1...v1.1.2-rc.0
 [1.1.1]: https://github.com/meister/reroute/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/meister/reroute/compare/v1.0.0...v1.1.0
