@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  release:
+    types: [created]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: env
+#     - uses: actions/checkout@v2
+#     - name: Build the Docker image
+#       run: docker build . --file Dockerfile --tag meistr/reroute:$(date +%s)
+#     - name: Tag latest
+#       run: docker tag meistr/reroute:$() meistr/reroute:latest
