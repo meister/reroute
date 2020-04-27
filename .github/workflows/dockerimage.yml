@@ -1,33 +1,20 @@
 name: Docker Image CI
 
-# on:
-#   release:
-#     types: [created]
 on:
-  # registry_package:
-  #   types: [published]
-  push:
-    branches:
-      - test-branch
+  registry_package:
+    types: [published]
 
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 10
-          registry-url: https://npm.pkg.github.com/
-      - run: npm install --production
-        # env:
-        #   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - uses: docker/build-push-action@v1
         with:
           username: meistr
           password: ${{ secrets.docker_hub_token }}
           repository: meistr/reroute
           tag_with_ref: true
+          tags: latest
