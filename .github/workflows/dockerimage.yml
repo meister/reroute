@@ -1,8 +1,11 @@
 name: Docker Image CI
 
+# on:
+#   release:
+#     types: [created]
 on:
-  release:
-    types: [created]
+  registry_package:
+    types: [published]
 
 jobs:
 
