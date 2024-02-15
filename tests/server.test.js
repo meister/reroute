@@ -7,7 +7,7 @@ const { EventEmitter } = require('events');
 jest.mock('../lib/io');
 
 const ioMock = require('../lib/io');
-const httpModule = jest.genMockFromModule('http');
+const httpModule = jest.createMockFromModule('http');
 const listenError = new Error('Invalid port');
 const listenMock = jest.fn((port, cb) => {
 	cb(port === 9000 ? null : listenError);
@@ -91,12 +91,12 @@ describe('start()', () => {
 	it('starts the server', async () => {
 		const server = startServer();
 
-		const result = await expect(server.start());
+		const result = await server.start();
 
 		expect(httpModule.createServer).toHaveBeenCalled();
 		expect(listenMock).toHaveBeenCalled();
 		expect(listenMock).toHaveBeenLastCalledWith(9000, expect.any(Function));
-		result.resolves.toBe(9000);
+		expect(result).toBe(9000);
 	});
 });
 
@@ -122,7 +122,7 @@ describe('stop()', () => {
 		return server.stop();
 	});
 
-	it('rejects when stopping server with error', () => {
+	it('rejects when stopping server with error', async () => {
 		const closeError = new Error('Server made a boo boo');
 
 		expect.assertions(1);
@@ -131,9 +131,7 @@ describe('stop()', () => {
 			fakeServer.emit('close', closeError);
 		});
 
-		return server.stop().catch((err) => {
-			expect(err).toBe(closeError);
-		});
+		await expect(server.stop()).rejects.toBe(closeError);
 	});
 });
 
