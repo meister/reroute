@@ -1,6 +1,7 @@
 language: node_js
+dist: focal
 node_js:
-  - "10"
+  - "16"
   - "18"
   - "lts/*"
 script:

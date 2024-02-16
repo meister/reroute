@@ -13,6 +13,9 @@
     "url": "https://github.com/meister/reroute.git"
   },
   "main": "./server/index.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "node server",
     "dev": "nodemon server",
