@@ -38,6 +38,11 @@
     "cli-color-tty": "^2.0.0",
     "lodash.at": "^4.6.0"
   },
+  "overrides": {
+    "cli-color-tty": {
+      "cli-color": "$cli-color"
+    }
+  },
   "jest": {
     "rootDir": ".",
     "testEnvironment": "node",
