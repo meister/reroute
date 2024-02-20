@@ -1,6 +1,6 @@
 # Reroute!
 
-[![Build Status](https://travis-ci.org/meister/reroute.svg?branch=master)](https://travis-ci.org/meister/reroute) [![Known Vulnerabilities](https://snyk.io/test/github/meister/reroute/badge.svg)]
+[![Build Status](https://travis-ci.org/meister/reroute.svg?branch=master)](https://travis-ci.org/meister/reroute) [![Known Vulnerabilities](https://snyk.io/test/github/meister/reroute/badge.svg)](https://snyk.io/advisor/npm-package/@meister/reroute)
 
 Reroute! is a single purpose service intended to redirect incoming requests
 based on their domain name and path.
@@ -75,4 +75,17 @@ Location: http://new.domain/
 Date: Wed, 13 Dec 2017 15:36:38 GMT
 Connection: keep-alive
 Content-Length: 0
+```
+
+### Health Check
+Server also allows health checking by supplying a HTTP request header.
+```
+❯ curl -i -H "x-health-check: true" localhost:8000/some-path
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: text/plain
+Date: Tue, 20 Feb 2024 22:05:02 GMT
+Content-Length: 2
+
+ok
 ```
