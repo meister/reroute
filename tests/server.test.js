@@ -12,7 +12,7 @@ const listenError = new Error('Invalid port');
 const listenMock = jest.fn((port, cb) => {
 	cb(port === 9000 ? null : listenError);
 });
-const stopMock = jest.fn((cb = (() => {})) => cb());
+const stopMock = jest.fn((cb = (() => { })) => cb());
 const fakeServer = new EventEmitter();
 
 fakeServer.listen = listenMock;
@@ -224,6 +224,19 @@ describe('requestHandler()', () => {
 		expect(response.end).toHaveBeenCalledTimes(1);
 		expect(response.end).toHaveBeenLastCalledWith('Not Found');
 		expect(ioMock.out.log).toHaveBeenLastCalledWith(404, 'foo/bar');
+	});
+
+	it('returns 200 with health check header', () => {
+		server.findRedirect = jest.fn().mockReturnValue();
+		request.headers['x-health-check'] = 'true';
+		server.requestHandler(request, response);
+
+		expect(response.setHeader).toHaveBeenCalledWith('Connection', 'close');
+		expect(response.setHeader).toHaveBeenLastCalledWith('Content-Type', 'text/plain');
+		expect(response.end).toHaveBeenCalledTimes(1);
+		expect(response.end).toHaveBeenLastCalledWith('ok');
+		expect(response.statusCode).toBe(200);
+		expect(ioMock.out.log).toHaveBeenLastCalledWith(200, '(health)', '->', 'ok');
 	});
 
 	it('returns provided status code', () => {
