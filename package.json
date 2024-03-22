@@ -34,7 +34,7 @@
     "nodemon": "^3.0.3"
   },
   "dependencies": {
-    "cli-color": "^2.0.3",
+    "cli-color": "^2.0.4",
     "cli-color-tty": "^2.0.0",
     "lodash.at": "^4.6.0"
   },
